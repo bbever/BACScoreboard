@@ -1,0 +1,35 @@
+int sensorPin = A0;
+int sensorValue = 0;
+int serialValue = 9600;
+
+void setup() {
+
+  // declare the ledPin as an OUTPUT:
+//  pinMode(ledPin, OUTPUT);
+  // declare Serial
+  Serial.begin(serialValue);
+  // Transmitter is connected to Arduino Pin #7
+}
+
+void loop() {
+  delay(1500);
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  Serial.println(sensorValue);
+
+//  if(sensorValue >= 220 && !is_on_switch)
+//  {
+//    Serial.println("switching on");
+//    digitalWrite(ledPin,HIGH);
+//    mySwitch.send(switch_on, switch_bits);
+//    is_on_switch = true;
+//  }
+//
+//  if(sensorValue < 220 && is_on_switch)
+//  {
+//    Serial.println("switching off");
+//    digitalWrite(ledPin,LOW);
+//    mySwitch.send(switch_off, switch_bits);
+//    is_on_switch = false;
+//  }
+}
